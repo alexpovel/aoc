@@ -30,15 +30,12 @@ class Line:
         self.horizontal = begin.y == end.y
         self.vertical = begin.x == end.x
 
-        self.slope = (
-            NotImplemented
-            if self.vertical
-            else (end.y - begin.y) / (end.x - begin.x)
-        )
-
-        self.shift = (
-            NotImplemented if self.vertical else end.y - self.slope * end.x
-        )
+        if self.vertical:
+            self.slope = None
+            self.shift = None
+        else:
+            self.slope = (end.y - begin.y) / (end.x - begin.x)
+            self.shift = end.y - self.slope * end.x
 
     def __contains__(self, coordinate: Coordinate):
         within_vertical_bounds = self.y_min <= coordinate.y <= self.y_max
