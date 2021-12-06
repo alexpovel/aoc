@@ -13,7 +13,7 @@ regular_days_left = 6
 
 totals = []
 
-for n in range(n_days):
+for _ in range(n_days):
     for days_left in range(initial_days_left + 1):
         # Shift every age group one down:
         school[days_left - 1] += school[days_left]
