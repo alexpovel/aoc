@@ -1,3 +1,4 @@
+pub mod day01;
 pub mod day03;
 pub mod iter;
 
@@ -21,6 +22,8 @@ trait Challenge {
 
 fn main() {
     let challenges: Vec<Box<dyn Challenge>> = vec![
+        Box::new(day01::part1::Part {}),
+        Box::new(day01::part2::Part {}),
         Box::new(day03::part1::Part {}),
         Box::new(day03::part2::Part {}),
     ];
@@ -35,19 +38,21 @@ fn main() {
         let elapsed = now.elapsed();
         total += elapsed;
 
-        let mark = if solution == challenge.solution() {
-            "✅"
+        let actual_solution = challenge.solution();
+        let (mark, actual_solution_hint) = if solution == actual_solution {
+            ("✅", "".to_string())
         } else {
             fail = true;
 
-            "❌"
+            ("❌", format!("(should be {})", actual_solution))
         };
 
         println!(
-            "{} {}: {}\t(took\t{:?})",
+            "{} {}: {} {} (took {:?})",
             mark,
             challenge.title(),
             solution,
+            actual_solution_hint,
             elapsed
         );
     }
