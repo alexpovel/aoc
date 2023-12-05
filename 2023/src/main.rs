@@ -1,4 +1,5 @@
 pub mod day01;
+pub mod day02;
 pub mod day03;
 pub mod day04;
 pub mod iter;
@@ -25,6 +26,8 @@ fn main() {
     let challenges: Vec<Box<dyn Challenge>> = vec![
         Box::new(day01::part1::Part {}),
         Box::new(day01::part2::Part {}),
+        Box::new(day02::part1::Part {}),
+        Box::new(day02::part2::Part {}),
         Box::new(day03::part1::Part {}),
         Box::new(day03::part2::Part {}),
         Box::new(day04::part1::Part {}),
