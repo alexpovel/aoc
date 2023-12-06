@@ -2,6 +2,7 @@ pub mod day01;
 pub mod day02;
 pub mod day03;
 pub mod day04;
+pub mod day06;
 pub mod iter;
 
 trait Challenge {
@@ -32,6 +33,8 @@ fn main() {
         Box::new(day03::part2::Part {}),
         Box::new(day04::part1::Part {}),
         Box::new(day04::part2::Part {}),
+        Box::new(day06::part1::Part {}),
+        Box::new(day06::part2::Part {}),
     ];
 
     let mut total = std::time::Duration::default();
