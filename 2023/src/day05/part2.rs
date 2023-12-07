@@ -119,24 +119,6 @@ fn apply(ranges: Ranges, shifts: Shifts) -> Ranges {
                     continue 'q;
                 }
             }
-
-            // if shift.range.start <= range.start && shift.range.end >= range.end {
-            //     // Shift fully encompasses range, shift entire range
-            //     res.push(shift_by(range, shift.by));
-
-            //     continue 'outer;
-            // } else if shift.range.start > range.start && shift.range.end < range.end {
-            //     // Shift is fully contained in range, split
-            //     let left = range.start..shift.range.start;
-            //     let right = shift.range.end..range.end;
-
-            //     queue.push_back(left);
-            //     queue.push_back(right);
-
-            //     res.push(shift_by(shift.range, shift.by));
-            // } else if shift.range.end < range.start || shift.range.start > range.end {
-            //     continue;
-            // }
         }
 
         // No shift applied, push range as-is
