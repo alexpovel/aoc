@@ -36,6 +36,7 @@ fn main() {
         Box::new(day04::part1::Part {}),
         Box::new(day04::part2::Part {}),
         Box::new(day05::part1::Part {}),
+        Box::new(day05::part2::Part {}),
         Box::new(day06::part1::Part {}),
         Box::new(day06::part2::Part {}),
         Box::new(day07::part1::Part {}),
