@@ -224,7 +224,7 @@ impl Challenge for Part {
         let mut hands = Vec::new();
         for line in input {
             let (hand, bid) = line.split_once(' ').unwrap();
-            let bid = bid.parse().unwrap();
+            let bid: usize = bid.parse().unwrap();
             let cards = Cards::from_str(hand).unwrap();
             let hand = Hand::from(cards);
 

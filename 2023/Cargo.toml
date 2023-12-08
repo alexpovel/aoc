@@ -6,7 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ahash = "0.8.6"
+evmap = "10.0.2"
 itertools = "0.12.0"
+num = "0.4.1"
 rangetools = "0.1.4"
 regex = "1.10.2"
 
