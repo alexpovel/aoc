@@ -35,6 +35,7 @@ dependencies = [
  "rangetools",
  "regex",
  "rstest",
+ "smallvec",
 ]
 
 [[package]]

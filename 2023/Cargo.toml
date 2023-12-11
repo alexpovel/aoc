@@ -12,6 +12,7 @@ itertools = "0.12.0"
 num = "0.4.1"
 rangetools = "0.1.4"
 regex = "1.10.2"
+smallvec = "1.11.2"
 
 [dev-dependencies]
 rstest = "0.18.2"
